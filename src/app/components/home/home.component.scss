@@ -1,0 +1,98 @@
+.home-container {
+  padding: 2rem;
+  min-height: calc(100vh - 200px);
+  background-color: #f8f9fa;
+}
+
+.content-wrapper {
+  display: flex;
+  gap: 2rem;
+  max-width: 1400px;
+  margin: 0 auto;
+  align-items: flex-start;
+}
+
+.section-card {
+  flex: 1;
+  min-width: 0; // Prevents flex items from overflowing
+}
+
+.welcome-card,
+.calendar-card {
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  height: 100%;
+}
+
+mat-card-header {
+  padding: 1.5rem 1.5rem 0.5rem;
+}
+
+mat-card-title {
+  font-size: 1.5rem !important;
+  font-weight: 500;
+  color: #2c3e50;
+  margin-bottom: 0.5rem;
+}
+
+mat-card-subtitle {
+  font-size: 1.1rem;
+  color: #5c6b7a;
+  margin-bottom: 0;
+}
+
+mat-card-content {
+  padding: 1.5rem;
+}
+
+.welcome-text {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #2c3e50;
+  margin-bottom: 1.5rem;
+}
+
+.features-list {
+  list-style: none;
+  padding: 0;
+  margin: 1rem 0;
+  
+  li {
+    margin: 1rem 0;
+    font-size: 1.1rem;
+    color: #3c4858;
+    display: flex;
+    align-items: center;
+    
+    &::before {
+      content: "✓";
+      color: #4CAF50;
+      font-weight: bold;
+      margin-right: 0.75rem;
+    }
+  }
+}
+
+.calendar-card {
+  mat-card-content {
+    padding: 1rem;
+  }
+}
+
+@media (max-width: 1024px) {
+  .content-wrapper {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .section-card {
+    width: 100%;
+    margin-bottom: 2rem;
+  }
+
+  .welcome-card,
+  .calendar-card {
+    max-width: 100%;
+  }
+}
